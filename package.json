@@ -4,13 +4,15 @@
   "description": "中国城市热力图可视化工具",
   "scripts": {
     "start": "serve .",
-    "build": "echo 'No build required'",
-    "vercel-build": "mkdir -p dist && cp -r * dist && cp -r .[^.]* dist"
+    "build": "npx vite build",
+    "vercel-build": "npm run build"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^4.0.0",
     "serve": "^14.2.1"
   },
   "engines": {
-    "node": ">=14"
+    "node": "^18.0.0"
   }
 }
