@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>中国城市热力图</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>中国城市热力图</h1>
+        </header>
+        <div class="file-requirements">
+            <h3>📊 数据文件要求</h3>
+            <p>1. 文件格式为CSV，第一行为标题行（省份,数值）</p>
+            <p>2. 省份名称必须包含"省"、"市"或"自治区"，例如：北京市、广东省、内蒙古自治区</p>
+            <p>3. 数值必须为数字</p>
+            <div class="example-code">
+                省份,数值<br>
+                北京市,80<br>
+                广东省,60
+            </div>
+        </div>
+        <div class="controls">
+            <div class="input-section">
+                <div class="input-group">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="fileInput" accept=".csv">
+                        <button onclick="loadData()">📤 加载数据</button>
+                        <button onclick="clearFileInput()" class="danger-btn">❌ 删除文件</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="text-input-wrapper">
+                        <textarea id="dataInput" placeholder="请输入城市名与数值（用英文逗号隔开）"></textarea>
+                        <button onclick="processInput()">📋 处理输入数据</button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="showValues" onchange="toggleValues()">
+                    <label for="showValues">显示数值标记</label>
+                </div>
+                <button onclick="exportImage()">💾 导出PNG图片</button>
+                <button onclick="resetMapView()">🔄 还原视图</button>
+                <button onclick="clearAllData()" class="danger-btn">🗑️ 清空数据</button>
+            </div>
+        </div>
+        <div id="map-container"></div>
+        <footer class="site-footer">
+            © 2024 龚老师技术
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
