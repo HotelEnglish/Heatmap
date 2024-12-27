@@ -12,5 +12,5 @@
       "dest": "/$1"
     }
   ],
-  "outputDirectory": "dist"  // 添加此行
+  "outputDirectory": "dist"
 }
