@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "中国城市热力图可视化工具",
   "scripts": {
-    "start": "serve",
-    "build": "echo 'No build required'"
+    "start": "serve .",
+    "build": "echo 'No build required'",
+    "vercel-build": "cp -r * dist && echo 'No build required'"
   },
   "dependencies": {
     "serve": "^14.2.1"
@@ -12,4 +13,4 @@
   "engines": {
     "node": ">=14"
   }
-} 
+}
