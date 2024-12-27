@@ -5,7 +5,7 @@
   "scripts": {
     "start": "serve .",
     "build": "echo 'No build required'",
-    "vercel-build": "cp -r * dist && echo 'No build required'"
+    "vercel-build": "mkdir -p dist && cp -r * dist && cp -r .[^.]* dist"
   },
   "dependencies": {
     "serve": "^14.2.1"
