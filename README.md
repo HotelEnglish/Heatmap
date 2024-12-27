@@ -84,6 +84,8 @@ china-heatmap/
 - 支持的省份包括所有省、直辖市和自治区
 - 热力图颜色范围：0-100
 
+
+
 ## 贡献指南
 
 1. Fork 本仓库
@@ -95,6 +97,7 @@ china-heatmap/
 ## 许可证
 
 MIT License - 查看 [LICENSE](LICENSE) 文件了解更多详情
+
 
 ## 作者
 
